@@ -8,6 +8,11 @@ This API is for us with a web interface to allow users to view the stats from Co
 
 The main restriction as of now is that there is only support for mySQL and not sqlite. I will possibly start development of a seperate project for converting sqlite to mySQL so that people can go down that road if they wish. I may also work on implementing support for sqlite into the current project, stay tuned!
 
+# Requirements
+* PHP >= 5.6.4
+* OpenSSL PHP Extension
+* PDO PHP Extension
+* Mbstring PHP Extension
 # Installation
 Not quite here yet ;)
 
@@ -48,6 +53,6 @@ CSGO Web Rank Me's Code Is Released Under The <a href="https://github.com/ToxicR
 Check out our website, <a href="https://toxicrevolution.net">ToxicRevolution.net</a> to see our current projects and updates regarding current projects. We like to interact with other server owners and in general with the community so feel free to drop by.
 
 # Donate!
-If you feel super generous you can donate me a drink or two here
+If you feel super generous you can donate to me here
 
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/kennyLtv)
