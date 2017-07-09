@@ -20,12 +20,13 @@ class RankMeWebMain extends Controller
 
   public function listPlayers()
   {
-    $info = DB::table('rankme')->get();
-    return response()->json($info->toArray());
+    $info = DB::table('rankme')->select(['id', 'steam', 'name', 'score'])->get();
+    return response()->json($info,200,[],JSON_PRETTY_PRINT);
   }
   public function listPlayer($id)
   {
-    $info = DB::table('rankme')->where('steam', $id)->get();
-    return response()->json($info->toArray());
+    $idr = preg_replace('/^STEAM_0/', 'STEAM_1', $id);
+    $info = DB::table('rankme')->where('steam', $idr)->first();
+    return response()->json($info,200,[],JSON_PRETTY_PRINT);
   }
 }
