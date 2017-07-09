@@ -12,5 +12,13 @@
 */
 
 $app->get('/', function () use ($app) {
-    return $app->version();
+  // Returning blank view for / for now we will get back to that later.
+    return view('home');
+});
+// V1 API Route group
+$app->group(['prefix' => 'api/v1'], function () use ($app){
+  // List all players
+  $app->get('/players', 'Api\v1\RankMeWebMain@listPlayers');
+  // List single players
+  $app->get('player/{id}', 'Api\v1\RankMeWebMain@listPlayer');
 });
