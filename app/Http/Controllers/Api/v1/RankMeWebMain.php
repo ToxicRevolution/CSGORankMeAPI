@@ -17,6 +17,10 @@ class RankMeWebMain extends Controller
     {
         //
     }
+  protected function notFound($message='Record Not Found', $statusCode=404)
+  {
+    return response()->json(['error'=> $message],$statusCode,[],JSON_PRETTY_PRINT);
+  }
 
   public function listPlayers()
   {
@@ -25,8 +29,12 @@ class RankMeWebMain extends Controller
   }
   public function listPlayer($id)
   {
+
     $idr = preg_replace('/^STEAM_0/', 'STEAM_1', $id);
-    $info = DB::table('rankme')->where('steam', $idr)->first();
+    $info = DB::table('rankme')->where('steam', $idr)->get();
+    if($info->count() < 1){
+      return $this->notFound();
+    }
     return response()->json($info,200,[],JSON_PRETTY_PRINT);
   }
 }
