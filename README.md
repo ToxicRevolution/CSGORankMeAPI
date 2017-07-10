@@ -30,7 +30,7 @@ Please report any errors this way as well so that I can update and fix those err
 CSGO Web Rank Me's Code Is Released Under The <a href="https://github.com/ToxicRevolution/CSGORankMeReact/blob/master/LICENSE">MIT License</a>
 
 # Acknowledgments
-* [Lumen](https://lumen.laravel.com/) - *The stunningly fast micro-framework by Laravel.*
+* [Laravel](https://laravel.com/) - *The PHP Framework For Web Artisans.*
 
 # Creator
 
