@@ -2,7 +2,7 @@
 API for Rank Me CSGO Stat tracking plugin
 
 # Purpose
-This API is for us with a web interface to allow users to view the stats from Counter Strike Global Offensive servers running the RankMe plugin found <a href='https://forums.alliedmods.net/showthread.php?p=1456869'>Here</a> or Kento's version found <a href="https://forums.alliedmods.net/showthread.php?t=290063">Here</a>
+This API is for use with a web interface to allow users to view the stats from Counter Strike Global Offensive servers running the RankMe plugin found <a href='https://forums.alliedmods.net/showthread.php?p=1456869'>Here</a> or Kento's version found <a href="https://forums.alliedmods.net/showthread.php?t=290063">Here</a>
 
 # Restrictions
 
