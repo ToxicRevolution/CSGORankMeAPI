@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class RankMeAPI extends Model
 {
-  protected $connetion = 'RankMe1';
-  
+  protected $connetion = 'rankme';
+
   protected $hidden = [
       'lastip', // makes the last IP of client not accessable in the API
   ];

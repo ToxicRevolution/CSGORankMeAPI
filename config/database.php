@@ -48,7 +48,7 @@ return [
             'engine' => null,
         ],
         // RankMe1 Database Config
-        'RankMe1' => [
+        'rankme' => [
             'driver' => 'mysql',
             'host' => env('DB_RANKME', '127.0.0.1'),
             'port' => env('DB_RANKMEPORT', '3306'),
