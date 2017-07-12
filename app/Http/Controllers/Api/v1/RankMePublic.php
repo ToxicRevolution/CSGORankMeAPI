@@ -26,13 +26,13 @@ class RankMePublic extends Controller
     public function listAllPaginate(RankMeAPI $rankMeAPI)
     {
         $info = RankMeAPI::paginate(15);
-        return response()->json($info,200,[]);
+        return response()->json($info,200,[],JSON_PRETTY_PRINT);
     }
 
     public function listAllPlayers(RankMeAPI $rankMeAPI)
     {
       $info = RankMeAPI::select('id', 'name', 'steam', 'kills', 'deaths')->get();
-      return response()->json($info,200,[]);
+      return response()->json($info,200,[],JSON_PRETTY_PRINT);
     }
 
     public function listPlayer(RankMeAPI $rankMeAPI, $id)
@@ -45,7 +45,7 @@ class RankMePublic extends Controller
       if($info->count() < 1){
         return $this->playerNotFound();
       }
-      return response()->json($info,200,[]);
+      return response()->json($info,200,[],JSON_PRETTY_PRINT);
     }
 
 }
