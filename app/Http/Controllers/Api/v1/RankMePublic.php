@@ -34,8 +34,6 @@ class RankMePublic extends Controller
       $info = RankMeAPI::select('id', 'name', 'steam', 'kills', 'deaths')->get();
       // Switch statement to deal with sorting of data based of query string
       switch (Request::get('sort')){
-        case '':
-          return response()->json($info,200,[],JSON_PRETTY_PRINT);
         case 'desc':
           $info = RankMeAPI::orderBy('score', 'desc')->get();
           return response()->json($info,200,[],JSON_PRETTY_PRINT);
@@ -44,6 +42,7 @@ class RankMePublic extends Controller
           return response()->json($info,200,[],JSON_PRETTY_PRINT);
         break;
       }
+      return response()->json($info,200,[],JSON_PRETTY_PRINT);
     }
 
     public function listPlayer(RankMeAPI $rankMeAPI, $id)
