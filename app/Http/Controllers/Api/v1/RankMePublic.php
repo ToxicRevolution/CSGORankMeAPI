@@ -38,10 +38,10 @@ class RankMePublic extends Controller
           return response()->json($info,200,[],JSON_PRETTY_PRINT);
         case 'desc':
           $info = RankMeAPI::orderBy('score', 'desc')->get();
-          return response()->json($info,200,[],JSON_PRETTY_PRINT);
+          return response()->json($info,200,[]);
         case 'asc':
           $info = RankMeAPI::orderBy('score', 'asc')->get();
-          return response()->json($info,200,[],JSON_PRETTY_PRINT);
+          return response()->json($info,200,[]);
         break;
       }
     }
