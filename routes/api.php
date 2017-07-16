@@ -14,8 +14,8 @@ use Illuminate\Http\Request;
 */
 Route::group(['prefix' => 'v1'], function(){
   Route::get('/', 'Api\v1\RankMePublic@home');
-  Route::get('/players', 'Api\v1\RankMePublic@listAllPlayers');
-  Route::get('/players/paginate', 'Api\v1\RankMePublic@listAllPaginate');
+  Route::get('/top', 'Api\v1\RankMePublic@listTopPlayers');
+  Route::get('/players', 'Api\v1\RankMePublic@listAllPaginate');
   Route::get('/player/{id}', 'Api\v1\RankMePublic@listPlayer');
 
 });
